@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "nombre": "Aspas",
+    "tecnica": 100,
+    "fisico": 90,
+    "mental": 82,
+    "energia": 100,
+    "forma": 75,
+    "nivel": 90,
+    "moral": 90,
+    "experiencia": 12
+  },
+  {
+    "id": "2",
+    "nombre": "Jose",
+    "tecnica": 96,
+    "fisico": 80,
+    "mental": 80,
+    "energia": 100,
+    "forma": 100,
+    "nivel": 85,
+    "moral": 60,
+    "experiencia": 9
+  },
+  {
+    "nombre": "Daria",
+    "tecnica": 3,
+    "fisico": 1,
+    "mental": 1,
+    "energia": 100,
+    "forma": 100,
+    "id": "1727724038222",
+    "nivel": 1,
+    "moral": 10,
+    "experiencia": 1
+  }
+]

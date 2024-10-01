@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Jugador</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1>Seleccionar Jugador</h1>
+        <div class="list-group">
+            <% jugadores.forEach(jugador => { %>
+                <a href="/players/<%= jugador.id %>" class="list-group-item list-group-item-action">
+                    <%= jugador.nombre %> (Nivel: <%= jugador.nivel %>)
+                </a>
+            <% }); %>
+        </div>
+        <a href="/players/add" class="btn btn-primary mt-3">Añadir Nuevo Jugador</a>
+    </div>
+</body>
+</html>
