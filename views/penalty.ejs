@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuego - Penaltis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .penalty-area {
+            width: 300px;
+            height: 200px;
+            background-color: #4CAF50;
+            position: relative;
+            margin: 20px auto;
+        }
+        .goal {
+            width: 200px;
+            height: 100px;
+            border: 5px solid white;
+            position: absolute;
+            top: 0;
+            left: 50px;
+        }
+        .ball {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 20px;
+            left: 140px;
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1>¡Lanza un Penalti!</h1>
+        <p>Elige la dirección del tiro y haz clic en "Tirar Penalti".</p>
+
+        <div class="penalty-area">
+            <div class="goal"></div>
+            <div id="ball" class="ball"></div>
+        </div>
+
+        <% if (resultado) { %>
+            <div class="alert alert-<%= resultado.exito ? 'success' : 'danger' %>">
+                <strong><%= resultado.mensaje %></strong>
+            </div>
+        <% } %>
+
+        <form id="penaltyForm" action="/minigames/penalty/<%= jugador.id %>" method="POST">
+            <div class="form-group">
+                <label for="direccion">Elige la dirección del tiro:</label>
+                <select name="direccion" id="direccion" class="form-control" required>
+                    <option value="izquierda">Izquierda</option>
+                    <option value="centro">Centro</option>
+                    <option value="derecha">Derecha</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Tirar Penalti</button>
+        </form>
+        <a href="/players/<%= jugador.id %>" class="btn btn-link mt-3">Volver al Perfil del Jugador</a>
+    </div>
+
+    <script>
+        document.getElementById('penaltyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const direccion = document.getElementById('direccion').value;
+            const ball = document.getElementById('ball');
+            
+            // Animar el balón
+            switch(direccion) {
+                case 'izquierda':
+                    ball.style.left = '60px';
+                    ball.style.top = '20px';
+                    break;
+                case 'centro':
+                    ball.style.left = '140px';
+                    ball.style.top = '20px';
+                    break;
+                case 'derecha':
+                    ball.style.left = '220px';
+                    ball.style.top = '20px';
+                    break;
+            }
+            
+            // Enviar el formulario después de la animación
+            setTimeout(() => {
+                this.submit();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

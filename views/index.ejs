@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Fútbol - <%= jugador.nombre %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .player-pixelart {
+            width: 200px;
+            height: auto;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+        .player-stats {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4"><%= jugador.nombre %></h1>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="/images/jugador.png" alt="Jugador pixelart" class="player-pixelart mb-3">
+            </div>
+            <div class="col-md-8 player-stats">
+                <div class="card">
+                    <div class="card-body">
+                        <p><strong>Técnica:</strong> <%= jugador.tecnica %></p>
+                        <p><strong>Físico:</strong> <%= jugador.fisico %></p>
+                        <p><strong>Mental:</strong> <%= jugador.mental %></p>
+                        <p><strong>Energía:</strong> <%= jugador.energia %></p>
+                        <p><strong>Forma:</strong> <%= jugador.forma %></p>
+                        <p><strong>Nivel:</strong> <%= jugador.nivel %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="mt-4">Acciones:</h2>
+        <div class="btn-group">
+            <form action="/players/<%= jugador.id %>/action/entrenarTecnica" method="POST" class="mr-2">
+                <button class="btn btn-primary">Entrenar Técnica</button>
+            </form>
+            <form action="/players/<%= jugador.id %>/action/entrenarFisico" method="POST" class="mr-2">
+                <button class="btn btn-success">Entrenar Físico</button>
+            </form>
+            <form action="/players/<%= jugador.id %>/action/entrenarMental" method="POST" class="mr-2">
+                <button class="btn btn-warning">Entrenar Mental</button>
+            </form>
+            <form action="/players/<%= jugador.id %>/action/descansar" method="POST" class="mr-2">
+                <button class="btn btn-info">Descansar</button>
+            </form>
+        </div>
+
+        <br><br>
+        <a href="/players/<%= jugador.id %>/edit" class="btn btn-link">Editar Jugador</a>
+        <a href="/players" class="btn btn-link">Seleccionar Otro Jugador</a>
+        <a href="/players/add" class="btn btn-link">Añadir Jugador</a>
+        <a href="/minigames/penalty/<%= jugador.id %>" class="btn btn-link">Jugar Penalti</a>
+    </div>
+</body>
+</html>

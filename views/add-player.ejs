@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Jugador</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1>Añadir Nuevo Jugador</h1>
+        <form action="/players/add" method="POST">
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" name="nombre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Técnica:</label>
+                <input type="number" name="tecnica" class="form-control" required min="1" max="100">
+            </div>
+            <div class="form-group">
+                <label>Físico:</label>
+                <input type="number" name="fisico" class="form-control" required min="1" max="100">
+            </div>
+            <div class="form-group">
+                <label>Mental:</label>
+                <input type="number" name="mental" class="form-control" required min="1" max="100">
+            </div>
+            <button type="submit" class="btn btn-success">Añadir Jugador</button>
+        </form>
+        <a href="/players" class="btn btn-link mt-3">Volver a la lista de jugadores</a>
+    </div>
+</body>
+</html>
