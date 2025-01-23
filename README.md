@@ -1,6 +1,6 @@
 # ⚽ Juego-Futbol-Tamagochi
 
-Bienvenido al **Juego-Futbol-Tamagochi** 🎮, un juego interactivo donde tú eres el entrenador de un equipo de fútbol. ¡Crea, entrena y gestiona a tus jugadores para llevarlos a la cima! 🌟
+Bienvenido al mejor juego de futbol 🎮, un juego interactivo donde tú eres el entrenador de un equipo de fútbol. ¡Crea, entrena y gestiona a tus jugadores para llevarlos a la cima! 🌟
 
 En este juego, los jugadores tienen estadísticas que mejoran con el entrenamiento, ¡y puedes jugar con ellos en mini-juegos de penalti! Además, puedes descansar, gestionar el equipo y mucho más. ¿Estás listo para convertirte en el mejor entrenador? 💪⚽
 
@@ -8,7 +8,7 @@ En este juego, los jugadores tienen estadísticas que mejoran con el entrenamien
 
 ## 🚀 Descripción
 
-**Juego-Futbol-Tamagochi** te permite asumir el rol de entrenador y crear diferentes jugadores de fútbol, cada uno con sus propias estadísticas y apariencia en **pixelart**. A través de un sistema de entrenamiento, tus jugadores mejoran y pueden descansar para mantener su rendimiento. Los entrenadores (tú) gestionan sus equipos, pueden ver qué jugadores están online y participar en mini-juegos como el penalti, donde eliges la dirección del tiro y el portero trata de detenerlo.
+**Juego-Futbol-Tamagochi** te permite asumir el rol de entrenador y crear diferentes jugadores de fútbol, cada uno con sus propias estadísticas y apariencia en **pixelart**. A través de un sistema de entrenamiento, tus jugadores mejoran y pueden descansar para mantener su rendimiento. Los entrenadores (tú) gestionan sus equipos, pueden ver qué otros entrenadores están online y participar en mini-juegos como el penalti, donde eliges la dirección del tiro y el portero trata de detenerlo.
 
 ---
 
@@ -26,7 +26,7 @@ En este juego, los jugadores tienen estadísticas que mejoran con el entrenamien
 ## 🧑‍💻 Cómo instalar
 
 1. 📂 Clona este repositorio:
-   git clone https://github.com/tu-usuario/Juego-Futbol-Tamagochi.git
+   git clone https://github.com/fmartingv/Juego-Futbol-Tamagochi
 
 2. 📦 Instala las dependencias:
    cd Juego-Futbol-Tamagochi
